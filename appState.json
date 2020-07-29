@@ -1,0 +1,216 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "39728da6-5b85-4514-a282-e0778a3d69bd": {
+        "id": "39728da6-5b85-4514-a282-e0778a3d69bd",
+        "parent": null,
+        "name": "api-gateway",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "f0a857cd-13fe-4a6f-9397-4489060d1f69",
+          "50d81c3b-e189-4bfc-b696-b4ce95eb559c",
+          "c485e548-b9bf-41cc-a170-eb9a28c8828d"
+        ],
+        "isRemovable": true,
+        "filePath": "api-gateway"
+      },
+      "f0a857cd-13fe-4a6f-9397-4489060d1f69": {
+        "id": "f0a857cd-13fe-4a6f-9397-4489060d1f69",
+        "parent": "39728da6-5b85-4514-a282-e0778a3d69bd",
+        "name": "01-basic-lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "api-gateway/01-basic-lambda.js",
+        "cursor": {
+          "lineNumber": 5,
+          "column": 53
+        },
+        "config": {
+          "runtime": "nodejs12.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "01BasicLambda"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast101BasicLambda01BasicLambdaany",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "b00e20f7-d212-4456-80d0-39c996d3dc91": {
+            "id": "b00e20f7-d212-4456-80d0-39c996d3dc91",
+            "name": "Test event",
+            "functionId": "f0a857cd-13fe-4a6f-9397-4489060d1f69",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "50d81c3b-e189-4bfc-b696-b4ce95eb559c": {
+        "id": "50d81c3b-e189-4bfc-b696-b4ce95eb559c",
+        "parent": "39728da6-5b85-4514-a282-e0778a3d69bd",
+        "name": "02-lambda-proxy-integration.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "api-gateway/02-lambda-proxy-integration.js",
+        "cursor": {
+          "lineNumber": 6,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs12.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "02-lambda-proxy-integration"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast102LambdaProxyIntegration02LambdaProxyIntegrationany",
+            "config": {}
+          }
+        ]
+      },
+      "c485e548-b9bf-41cc-a170-eb9a28c8828d": {
+        "id": "c485e548-b9bf-41cc-a170-eb9a28c8828d",
+        "parent": "39728da6-5b85-4514-a282-e0778a3d69bd",
+        "name": "03-lambda-query-params.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "api-gateway/03-lambda-query-params.js",
+        "cursor": {
+          "lineNumber": 12,
+          "column": 83
+        },
+        "config": {
+          "runtime": "nodejs12.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "03LambdaQueryParams"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast103LambdaQueryParams03LambdaQueryParamsany",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "openFiles": [
+      "c485e548-b9bf-41cc-a170-eb9a28c8828d"
+    ],
+    "currentFileId": "c485e548-b9bf-41cc-a170-eb9a28c8828d",
+    "resources": {
+      "apigusEast101BasicLambda01BasicLambdaany": {
+        "name": "apigusEast101BasicLambda01BasicLambdaany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiType": 1,
+          "apiMode": 0,
+          "apiName": "01-basic-lambda",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "01-basic-lambda",
+          "resourcePath": "/01-basic-lambda",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "dev",
+          "mode": 0
+        }
+      },
+      "apigusEast102LambdaProxyIntegration02LambdaProxyIntegrationany": {
+        "name": "apigusEast102LambdaProxyIntegration02LambdaProxyIntegrationany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiType": 1,
+          "apiMode": 0,
+          "apiName": "02-lambda-proxy-integration",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "02-lambda-proxy-integration",
+          "resourcePath": "/02-lambda-proxy-integration",
+          "restMethod": "ANY",
+          "proxyIntegration": true,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "dev",
+          "mode": 0
+        }
+      },
+      "apigusEast103LambdaQueryParams03LambdaQueryParamsany": {
+        "name": "apigusEast103LambdaQueryParams03LambdaQueryParamsany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiType": 1,
+          "apiMode": 0,
+          "apiName": "03-lambda-query-params",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "03-lambda-query-params",
+          "resourcePath": "/03-lambda-query-params",
+          "restMethod": "ANY",
+          "proxyIntegration": true,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "dev",
+          "mode": 0
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.1.1",
+    "projectName": "aws-lambda-samples",
+    "projectDescription": "AWS Lambda Examples",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1596013353709
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "aws-lambda-samples",
+      "url": "https://github.com/asankha/aws-lambda-samples"
+    }
+  }
+}
